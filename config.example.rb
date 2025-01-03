@@ -9,15 +9,15 @@ module Config
 
 	MODEL = 'gpt-4o'
 
-	OUTPUT_FAILURE_TESTS_PATH = '/home/username/Documents/chatgpt_test_prompt/db/output_failure_tests.txt'
+	OUTPUT_FAILURE_TESTS_PATH = '/home/username/Documents/ruby-cover-agent/db/output_failure_tests.txt'
 
 	PROJECT_ROOT_PATH = '/home/username/Documents/ruby-workspace/teste/'
 
-	PROJECT_FILES_PATH = "/home/username/Documents/chatgpt_test_prompt/db/project_files.txt"
+	PROJECT_FILES_PATH = "/home/username/Documents/ruby-cover-agent/db/project_files.txt"
 
-	RELATED_FILES_DB_PATH = '/home/username/Documents/chatgpt_test_prompt/db/related_files.txt'
+	RELATED_FILES_DB_PATH = '/home/username/Documents/ruby-cover-agent/db/related_files.txt'
 
-	SUCCESS_FILE_TESTS_PATH = '/home/username/Documents/chatgpt_test_prompt/db/success_file_tests.txt'
+	SUCCESS_FILE_TESTS_PATH = '/home/username/Documents/ruby-cover-agent/db/success_file_tests.txt'
 
 	@@class_being_tested_sufix_path = 'app/models/user.rb'
 
