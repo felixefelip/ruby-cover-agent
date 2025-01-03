@@ -36,6 +36,10 @@ module IaPrompts
 
 					Não use arquivos de fixtures.
 
+					Não user stubs, mocks e fakes.
+
+					Se a factory não existir não use factories, crie os objetos pela classe original.
+
 					Se for um teste de Controller e precisar fazer login, use o método `login(user, pessoa)`.
 
           Aqui está como é o retorno que eu espero:"

@@ -33,9 +33,9 @@ module IAPrompts
         file_test_adjusted = response_content['arquivo_de_teste_corrigido']
         explicacao_da_solucao_realizada = response_content['explicacao_da_solucao_realizada']
 
-        puts "Motivo da falha: #{failure_motives}\n\n"
+        # puts "Motivo da falha: #{failure_motives}\n\n"
         puts "Arquivo de teste ajustado: #{file_test_adjusted}\n\n"
-        puts "Explicação da solução realizada: #{explicacao_da_solucao_realizada}\n\n"
+        # puts "Explicação da solução realizada: #{explicacao_da_solucao_realizada}\n\n"
 
 
         write_solution_to_test_file(file_test_adjusted)

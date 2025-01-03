@@ -9,7 +9,20 @@ module IaPrompts
 					success = false
 
 					Dir.chdir(Config::PROJECT_ROOT_PATH) do
-						success = system("bundle exec rspec #{Config.file_test_path}")
+						output = `bundle exec rspec #{Config.file_test_path}`
+						success = $?.success?
+
+						puts output
+
+						if success
+							File.open(Config::OUTPUT_FAILURE_TESTS_PATH, "w") do |file|
+								file.puts ""
+							end
+						else
+							File.open(Config::OUTPUT_FAILURE_TESTS_PATH, "w") do |file|
+								file.puts output
+							end
+						end
 					end
 
 					if success && File.read(Config::OUTPUT_FAILURE_TESTS_PATH).empty?

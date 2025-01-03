@@ -25,7 +25,7 @@ module IAPrompts
 						```
 
 						Me retorne todo o arquivo de teste com a correção dos testes que falharam (a classe a ser testada não pode ser alterada nem ter testes removidos).
-						O retorno no `content` deve ser em JSON para ser usado em um Hash do Ruby (sem coisas como ```json\n), com as seguintes chaves: `motivo_da_falha`, `arquivo_de_teste_corrigido`, `explicacao_da_solucao_realizada`.
+						O retorno no `content` deve ser em JSON para ser usado em um Hash do Ruby (IMPORTANTE: sem textos como ```json\n), com as seguintes chaves: `motivo_da_falha`, `arquivo_de_teste_corrigido`, `explicacao_da_solucao_realizada`.
 
 						Por exemplo:
 						#{json_model}
@@ -34,7 +34,9 @@ module IAPrompts
 
 						Não use arquivos de fixtures.
 
-						Se for criar factories, user o `FactoryGirl.define`
+						Não user stubs, mocks e fakes.
+
+						Se a factory não existir não use factories, crie os objetos pela classe original.
 
 						Se for um teste de Controller e precisar fazer login, use o método `login(user, pessoa)`.
 					PROMPT

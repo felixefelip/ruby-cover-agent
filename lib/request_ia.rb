@@ -8,6 +8,7 @@ module RequestIA
 
 			body = {
 				model: Config::MODEL,
+				temperature: 0.1,
 				messages: [{ role: 'user', content: content }]
 			}.to_json
 
